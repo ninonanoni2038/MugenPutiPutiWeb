@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Sound from 'react-sound'
 
 const App = () => {
   return <Counter />
@@ -14,23 +15,57 @@ class Counter extends Component {
 
   onIncrement = () => {
     this.setState({ value: this.state.value + 1 });
+
   }
 
   onDecrement = () => {
     this.setState({ value: this.state.value - 1 });
   }
+
+
+
   render()
   {
     return (
-      <div>
-        <div>
-          カウント値：{this.state.value}
+      <button>
+        <div className="title">
+          <h1>無限ぷちぷち</h1>
         </div>
-        <div>
-          <button type="button" onClick={this.onIncrement}>+</button>
-          <button type="button" onClick={this.onDecrement}>-</button>
+        <div className="buttons">
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
+          <div className="button-container">
+            <button type="button" onClick={this.onIncrement}></button>
+          </div>
         </div>
-      </div>
+        <div className="valueState">
+          <p>{this.state.value}</p>
+        </div>
+      </button>
+
+
     )
   }
 }
