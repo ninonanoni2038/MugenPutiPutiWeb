@@ -5,6 +5,8 @@ const App = () => {
   return <Counter />
 }
 
+
+
 class Counter extends Component {
   constructor(props) {
     super(props);
